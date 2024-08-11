@@ -10,13 +10,11 @@ export const magasin = createSlice({
 name: "magasin",
 initialState,
 reducers: {
-    getTrees: (state, payload) => {
-        return state.trees
+    setTrees: (state, action) => {
+        state.trees = action.payload;
     },
-    
-
 }
 })
 
 export default magasin.reducer
-export const { getTrees } = magasin.actions
+export const { setTrees } = magasin.actions
